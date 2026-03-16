@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Management Page</title>
+    <link rel="stylesheet" href="E:\WebTech\Lab Performance_MID\Design\Style.css">
+</head>
+
+<body>
+    <script src="E:\WebTech\Lab Performance_MID\JS\Validation.js"></script>
+
+    <form class="form" id="form">
+        <h1>Product Management Page</h1>
+
+        <label for="unitPrice">Unit Price:</label>
+        <input type="number" id="unitPrice" readonly value="1000">
+
+        <label for="quantityDay">Quantity per Day:</label>
+        <input type="number" id="quantityDay" placeholder="Enter quantity per day" min="0">
+        <span id="error">Quantity must be greater than 0.</span>
+
+        <label for="totalPrice">Total Price for 30 Days:</label>
+        <input type="number" id="totalPrice" readonly value="0">
+    </form>
+
+</body>
+
+</html>

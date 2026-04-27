@@ -17,7 +17,7 @@ class db
 
     function signup($connection, $tablename, $name, $email, $password,$filepath)
     {
-        $sql = "INSERT INTO " . $tablename . "(name,email,password) VALUES('" . $name . "','" . $email . "','" . $password . "','".$filepath."')";
+        $sql = "INSERT INTO " . $tablename . "(name,email,password,filepath) VALUES('" . $name . "','" . $email . "','" . $password . "','".$filepath."')";
         $result = $connection->query($sql);
         return $result;
     }

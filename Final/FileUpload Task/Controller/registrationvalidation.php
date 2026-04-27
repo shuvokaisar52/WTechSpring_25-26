@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 	$file=$_FILES["file"];
 
-    if (!empty($name) && strlen($name) >= 10 && !empty($email) && preg_match("/^[^\s@]+@[^\s@]+\.[^\s@]+$/", $email) && !empty($password) && strlen($password) > 5) {
+    if (!empty($name) && strlen($name) >= 5 && !empty($email) && !empty($password) && strlen($password) > 5) {
         $_SESSION["name"] = $name;
         setcookie("name", $name, time() + 3600, "/");
         $_SESSION["email"] = $email;
@@ -42,8 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		
 		if($file){
 			$targetdirectory = "../File/";
-			$path=targetdirectory.basename($file["name"]);
-			$result=move_uploaded_file($file["tmp_name",$path);
+			$path=$targetdirectory.basename($file["name"]);
+			$result=move_uploaded_file($file["tmp_name"],$path);
 		}else{
 			$path="";
 		}
